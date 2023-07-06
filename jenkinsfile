@@ -18,17 +18,16 @@ pipeline {
                 sh 'git pull'
             }
         }
-
         stage('Build') {
             steps {
                 sh 'npm install'
             }
         }
-
         stage('Test') {
             steps {
-                sh 'npm test'
+               sh 'node test'
             }
         }
-  }
+    }
+  
 }
